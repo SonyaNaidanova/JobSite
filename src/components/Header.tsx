@@ -5,7 +5,7 @@ export default function Header(){
         <>
         <Group gap="xs">
         <Image 
-        src='/logoHH.png' 
+        src='/JobSite/logoHH.png' 
         h={32}       
         w="auto" 
         alt="HH Logo"
@@ -24,7 +24,7 @@ export default function Header(){
              Вакансии FE
         </Anchor>
         <Text c="indigo.6" fw={700}>•</Text>
-        <Image src={'public/user-circle.svg'} h={25} w="auto" />
+        <Image src="/JobSite/logoHH.png" h={25} w="auto" alt="Logo"/>
         <Anchor c="dimmed" underline="never">
                Обо мне
         </Anchor>
