@@ -1,5 +1,6 @@
 import { Paper, Text, Badge, Button, Group, Stack } from '@mantine/core'
 import { type Job } from "../store/jobsThunks";
+import { Link } from 'react-router-dom';
 
 export default function JobCard({ job }: { job: Job }) {
   const getSpaceLabel = (space: string) => {
@@ -40,11 +41,16 @@ export default function JobCard({ job }: { job: Job }) {
         <Text size="sm" fw={400} c="#0F0F10">{job.city}</Text>
 
         <Group justify="flex-start" mt="xs">
-          <Button color="black" size="sm" radius="md">
-            Смотреть вакансию
+          <Button
+          component={Link}
+          to={`/vacancies/${job.id}`}
+          color="black"
+          size="sm"
+          radius="md"
+          >
+          Смотреть вакансию
           </Button>
         </Group>
-
       </Stack>
     </Paper>
   )
